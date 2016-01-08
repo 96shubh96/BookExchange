@@ -1,0 +1,121 @@
+<html>
+<head>
+
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.1/css/materialize.min.css">-->
+  
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.1/css/materialize.min.css">
+  
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<!--<link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection"></link>-->
+ <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+ </head>
+<body background="static/images/background.png">
+  <div class="navbar-fixed">
+ <nav>
+ <div class="nav-wrapper">
+ 
+ <ul><li><a class="btn waves-effect waves-teal" href="profilepage">Book Exchange</a></li></ul>
+  <ul><li>
+  
+     </li></ul>
+ <ul class="right hide-on-med-and-down">
+    <li><a href="addbook">Add Books</a></li>
+    <li><a href="http://ebook.com/">eBooks</a></li>
+    <li><a href="request">Request</a></li>
+    <li><a href="#" data-activates="slide-out" class="button-collapse show-on-large"><i class="mdi-navigation-menu"></i></a></li> 
+  </ul>
+  <ul id="slide-out" class="side-nav" style="background-color:#ffee99;font-size:25px " >
+    <li><a class="waves-effect waves-purple" href="profilepage">Home</a></li><hr>
+    <li><a class="waves-effect waves-purple" href="editprofile">Edit Profile</a></li><hr>
+	<li><a class="waves-effect waves-purple" href="contactus">Contact Us</a></li><hr>
+    <li><a class="waves-effect waves-purple" href="/logout">Logout</a></li><hr>
+  </ul>
+  
+  </div>
+</nav>
+</div>
+ <br>
+<h2 class="center-align">Profile Page</h2>
+<br>
+    <br>
+<div class="row">
+<div class="col s10 offset-s1">
+	  <table class="striped">
+              <tbody>
+          <tr>
+            <td><h6>Name</h6></td>
+            <td>:</td>
+			<td><h6><%=name%></h6></td>
+          </tr>
+          <tr>
+            <td><h6>Roll No</h6></td>
+            <td>:</td>           
+		   <td><h6><%=roll%></h6></td>
+          </tr>
+          <tr>
+            <td><h6>Email</h6></td>
+            <td>:</td>
+            <td><h6><%=email%></h6></td>
+          </tr>
+		    <tr>
+            <td><h6>Semester</h6></td>
+            <td>:</td>
+			<td><h6><%=sem%></h6></td>
+          </tr>
+		  <tr>
+            <td><h6>Branch</h6></td>
+            <td>:</td>
+			<td><h6><%=branch%></h6></td>
+          </tr>
+		  <tr>
+            <td><h6>Book Added</h6></td>
+            <td>:</td>
+			<td><h6><%=booka%></h6></td>
+          </tr>
+        </tbody>
+      </table>
+	  </div>
+	  </div>
+  
+	 <br><br>
+	
+  <footer class="page-footer footer-copyright ">
+   <table>
+   <tr>
+   <td>
+   <center>
+   <i class="material-icons">email</i><p>BookExchangeSite@gmail.com</p>
+   </center>
+   </td>
+   <td>
+   <center>
+   <i class="material-icons">contact_phone</i><p>+91-8888122723</p>
+   </center>  
+   </td>
+   <td>
+   <center>
+   <p>Copy Right&copy2015BookExchange</p>
+   </center>
+   </td>
+   </tr>
+   </table>
+		  </footer>
+
+
+
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.1/js/materialize.min.js"></script> 
+  <script>
+       $(document).ready(function(){
+       $(".button-collapse").sideNav({
+        menuWidth:300,
+            edge:'right',
+       closeOnClick:true
+          });
+       });
+  </script>
+ 
+</body>
+</html>

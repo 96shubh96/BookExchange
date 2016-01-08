@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.1/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script  type="text/javascript" src="typeahead.js"></script>
+</head>
+<body background="static/images/background.png">
+      <div class="navbar-fixed" id="home">
+ <nav>
+ <div class="nav-wrapper">
+ 
+ <ul><li><a class="btn waves-effect waves-teal" href="profilepage">Book Exchange</a></li></ul>
+  <ul><li>
+  
+     </li></ul>
+ <ul class="right hide-on-med-and-down">
+    <li><a href="addbook">Add Books</a></li>
+    <li><a href="http://ebook.com/">eBooks</a></li>
+    <li><a href="request">Request</a></li>
+    <li><a href="#" data-activates="slide-out" class="button-collapse show-on-large"><i class="mdi-navigation-menu"></i></a></li> 
+  </ul>
+  <ul id="slide-out" class="side-nav" style="background-color:#ffee99;font-size:25px " >
+     <li><a class="waves-effect waves-purple"  href="viewprofile" >View Profile</a></li><hr>
+    <li><a class="waves-effect waves-purple" href="editprofile">Edit Profile</a></li><hr>
+	<li><a class="waves-effect waves-purple" href="contactus">ContactUs</a></li><hr>
+    <li><a class="waves-effect waves-purple" href="/logout">Logout</a></li><hr>
+  </ul>
+  
+  </div>
+</nav>
+</div>
+
+
+<br><br><br>
+<h3 class="center-align"> You have 0 Books currently available</h3>
+    <br>
+    <h3 class="center-align">Please Add Book here  &nbsp<a href="addbook">Add Book</a></h3>
+
+
+
+
+<br><br><br><br><br><br><br><br><br>
+    <footer class="page-footer footer-copyright ">
+   <table>
+   <tr>
+   <td>
+   <center>
+   <i class="material-icons">email</i><p>BookExchangeSite@gmail.com</p>
+   </center>
+   </td>
+   <td>
+   <center>
+   <i class="material-icons">contact_phone</i><p>+91-8888122723</p>
+   </center>  
+   </td>
+   <td>
+   <center>
+   <p>Copy Right&copy2015BookExchange</p>
+   </center>
+   </td>
+   </tr>
+   </table>
+		  </footer>
+
+    <script>
+       $(document).ready(function(){
+       $(".button-collapse").sideNav({
+        menuWidth:300,
+            edge:'right',
+       closeOnClick:true
+          });
+		  
+       });
+  </script>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.1/js/materialize.min.js"></script>
+</body>
+</html>
+

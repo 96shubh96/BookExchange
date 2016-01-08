@@ -1,0 +1,20 @@
+.newimg1{
+margin:auto;
+border-radius: 50%;
+                overflow: hidden;
+    width: 220px;
+    height: 220px;
+display:inline-block
+}
+.newimg1:hover.newimg1{
+transform: rotate3D(0,1,0,360deg);
+    -webkit-transform: rotate3D(0,1,0,360deg);
+    -o-transform: rotate3D(0,1,0,360deg);
+    -ms-transform: rotate3D(0,1,0,360deg);
+    -moz-transform: rotate3D(0,1,0,360deg);
+    transition: 1s all ease;
+    -webkit-transition: 1s all ease;
+    -moz-transition: 1s all ease;
+    -o-transition: 1s all ease;
+    -ms-transition: 1s all ease;
+}

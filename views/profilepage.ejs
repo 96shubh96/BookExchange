@@ -1,0 +1,188 @@
+<html>
+<head>
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.1/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script  type="text/javascript" src="typeahead.js"></script>
+<script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
+<script type="text/javascript">
+    
+    $(document).ready(function () {
+        
+        $('input.typeahead').typeahead({
+            name: 'countries',
+            remote: 'http://127.0.0.1:1337/profilepage/search?key=%QUERY',
+            limit: 10
+        }).on('typeahead:selected', function (event, selection) {
+            var socket = io.connect();
+            var parameters = selection.value;
+            console.log(parameters);
+            //$('.alert').show().html('You selected <strong>' + parameters + '</strong>');
+            socket.emit('news', {msg:parameters});
+
+        });
+    });
+   
+</script>
+ </head>
+   
+<style type="text/css">
+.footer {
+   position:;
+   bottom:0;
+   width:100%;
+   height:80px;   /* Height of the footer */
+   background:#ff8a80;
+}
+.bs-example{
+	font-family: sans-serif;
+	position: relative
+	margin: 50px;
+}
+.typeahead, .tt-query, .tt-hint {
+	border: 2px solid #CCCCCC;
+	border-radius: 8px;
+	font-size: 24px;
+	height: 30px;
+	line-height: 30px;
+	outline: medium none;
+	padding: 8px 12px;
+	width: 200px;
+}
+.typeahead {
+	background-color: #FFFFFF;
+}
+.typeahead:focus {
+	border: 5px solid #0097CF;
+}
+.tt-query {
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+}
+.tt-hint {
+	color: #999999;
+}
+.tt-dropdown-menu {
+	background-color: #FFFFFF;
+	border: 1px solid rgba(0, 0, 0, 0.2);
+	border-radius: 8px;
+	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+	margin-top: 12px;
+	padding: 8px 0;
+	width: 300px;
+}
+.tt-suggestion {
+	font-size: 24px;
+	line-height: 24px;
+	padding: 3px 20px;
+}
+.tt-suggestion.tt-is-under-cursor {
+	background-color: #0097CF;
+	color: #FFFFFF;
+}
+.tt-suggestion p {
+	margin: 0;
+}
+    body {
+    background-image: url("static/images/lib.jpg");
+    background-repeat: no-repeat;
+    width: auto;
+	height:300px;
+}
+</style>
+ <body>
+
+
+  <div class="navbar-fixed" id="home">
+ <nav>
+ <div class="nav-wrapper">
+ 
+ <ul><li><a class="btn waves-effect waves-teal" href="profilepage">Book Exchange</a></li></ul>
+  <ul><li>
+  
+     </li></ul>
+ <ul class="right hide-on-med-and-down">
+    <li><a href="updatebooks">My Books</a></li>
+	<li><a href="addbook">Add Books</a></li>
+    <li><a href="http://ebook.com/">eBooks</a></li>
+    <li><a href="request">Request</a></li>
+    <li><a href="#" data-activates="slide-out" class="button-collapse show-on-large"><i class="mdi-navigation-menu"></i></a></li> 
+  </ul>
+  <ul id="slide-out" class="side-nav" style="background-color:#ffee99;font-size:25px " >
+    <li><a class="waves-effect waves-purple"  href="viewprofile" >View Profile</a></li><hr>
+    <li><a class="waves-effect waves-purple" href="editprofile">Edit Profile</a></li><hr>
+   
+	<li><a class="waves-effect waves-purple" href="contactus">ContactUs</a></li><hr>
+    <li><a class="waves-effect waves-purple" href="/logout">Logout</a></li><hr>
+  </ul>
+  
+  </div>
+</nav>
+</div>
+
+
+ 
+  <div class="center-align" >
+     <br>
+    <h5 class="right-align" style="margin-right: 30px;" ><b>Welcome &nbsp;&nbsp; </b><span style="color:#bb5d7d;font-size:25px;"> <%=users%> &nbsp;&nbsp;</span> </h5>
+  <div class="right-align" style="margin-top:30px; ">
+    <div class="bs-example">
+        
+		<input type="text" name="typeahead" class="typeahead tt-query" autocomplete="on" spellcheck="false" placeholder="Search">
+         <a class="btn-floating btn-large waves-effect waves-light gray" type="submit" href="searchbook" style="margin-top:45px;margin-left:20px;margin-right: 40px" ><i class="material-icons">search</i></a>   
+   </div>
+	
+</div>
+  <br><br><br><br>
+      <ul class="right-align"style="margin-right: 50px;font-family: 'Monotype Corsiva';">
+          <li><h4 style="color: #bc138a">A room without books</h4></li> <li><h4 style="color: #bc138a" >is like a body</h4></li> <li><h4 style="color: #bc138a">without a soul</h4></li>
+       <li><p class="right-align"style="color: #f76a6a">- Marcus Tullius Cicero</p></li> 
+  </ul>
+  </div>
+
+     
+  
+   <!--<div class="row">
+            <div class="alert alert-block alert-success"></div>
+        </div>-->
+  <footer class="page-footer footer-copyright ">
+   <table>
+   <tr>
+   <td>
+   <center>
+   <i class="material-icons">email</i><p>BookExchangeSite@gmail.com</p>
+   </center>
+   </td>
+   <td>
+   <center>
+   <i class="material-icons">contact_phone</i><p>+91-8888122723</p>
+   </center>  
+   </td>
+   <td>
+   <center>
+   <p>Copy Right&copy2015BookExchange</p>
+   </center>
+   </td>
+   </tr>
+   </table>
+		  </footer>
+
+
+ 
+<script>
+       $(document).ready(function(){
+       $(".button-collapse").sideNav({
+        menuWidth:300,
+            edge:'right',
+       closeOnClick:true
+          });
+		  
+       });
+  </script>
+ 
+<!--<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>-->
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.1/js/materialize.min.js"></script> 
+
+
+</body>
+</html>

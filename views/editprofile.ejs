@@ -1,0 +1,151 @@
+<html>
+<head>
+
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.1/css/materialize.min.css">-->
+  
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.1/css/materialize.min.css">
+  
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<!--<link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection"></link>-->
+ <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+ </head>
+<body background="static/images/background.png">
+  <div class="navbar-fixed">
+ <nav>
+ <div class="nav-wrapper">
+ 
+ <ul><li><a class="btn waves-effect waves-teal" href="profilepage">Book Exchange</a></li></ul>
+  <ul><li>
+  
+     </li></ul>
+ <ul class="right hide-on-med-and-down">
+    <li><a href="addbook">Add Books</a></li>
+    <li><a href="http://ebook.com/">eBooks</a></li>
+    <li><a href="request">Request</a></li>
+    <li><a href="#" data-activates="slide-out" class="button-collapse show-on-large"><i class="mdi-navigation-menu"></i></a></li> 
+  </ul>
+  <ul id="slide-out" class="side-nav" style="background-color:#ffee99;font-size:25px " >
+    <li><a class="waves-effect waves-purple" href="profilepage">Home</a></li><hr>
+	<li><a class="waves-effect waves-purple"  href="viewprofile" >View Profile</a></li><hr>
+  
+	<li><a class="waves-effect waves-purple" href="contactus">Contact Us</a></li><hr>
+    <li><a class="waves-effect waves-purple" href="/logout">Logout</a></li><hr>
+  </ul>
+  
+  </div>
+</nav>
+</div>
+ <br>
+	<h2 class="center-align">Edit Profile</h2><br><br>
+	 <div class="row">
+    <form class="col s4 offset-s4 #f5f5f5 grey lighten-4" method="POST" action="editdata">
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="roll_no" type="text" class="validate" name="rollno" value="<%=roll%>"disabled selected>
+          <label for="roll_no">Roll No</label>
+        </div>
+      </div>
+	  <div class="row">
+        <div class="input-field col s6 ">
+          <input id="first_name" type="text" class="validate" name="firstname" value="<%=name%>"disabled selected>
+          <label for="first_name">First Name</label>
+        </div>
+        <div class="input-field col s6">
+          <input id="last_name" type="text" class="validate" name="lastname" value="<%=name1%>"disabled selected>
+          <label for="last_name">Last Name</label>
+        </div>
+      </div>
+      
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="branch" type="text" class="validate" name="branch" value="<%=branch%>">
+          <label for="branch">Branch</label>
+        </div>
+      </div>
+	 <div class="input-field col s12">
+	  
+    <select class="browser-default" name="sem">
+      <option value="" disabled selected><%=sem%></option>
+      <option value="1">1st Sem</option>
+      <option value="2">2nd Sem</option>
+      <option value="3">3rd Sem</option>
+      <option value="4">4th Sem</option>
+	  <option value="5">5th Sem</option>
+	  <option value="6">6th Sem</option>
+	  <option value="7">7th Sem</option>
+	  <option value="8">8th Sem</option>
+    </select>
+            </div>
+<br><br><br>
+			<div class="input-field col s12">
+          <input id="contact_no" type="tel" class="validate" name="contact" value="<%=contact%>">
+          <label for="contact_no">Contact No</label>
+        </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="email" type="email" class="validate" name="email" value="<%=email%>">
+          <label for="email">Email</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="password" type="password" class="validate" name="password">
+          <label for="password">Password</label>
+        </div>
+      </div>
+	        <div class="row">
+        <div class="input-field col s12">
+          <input id="confirmpassword" type="password" class="validate" name="confirmpassword">
+          <label for="confirmpassword">Confirm Password</label>
+        </div>
+      </div>
+ <button class="btn waves-effect waves-light col s12" type="submit" value="submit" href="profilepage">Update
+   
+  </button>
+ 
+  </form>
+  </div> 
+
+  
+	 <br><br>
+	
+  <footer class="page-footer footer-copyright ">
+   <table>
+   <tr>
+   <td>
+   <center>
+   <i class="material-icons">email</i><p>BookExchangeSite@gmail.com</p>
+   </center>
+   </td>
+   <td>
+   <center>
+   <i class="material-icons">contact_phone</i><p>+91-8888122723</p>
+   </center>  
+   </td>
+   <td>
+   <center>
+   <p>Copy Right&copy2015BookExchange</p>
+   </center>
+   </td>
+   </tr>
+   </table>
+		  </footer>
+
+
+
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.1/js/materialize.min.js"></script> 
+  <script>
+       $(document).ready(function(){
+       $(".button-collapse").sideNav({
+        menuWidth:300,
+            edge:'right',
+       closeOnClick:true
+          });
+       });
+  </script>
+ 
+</body>
+</html>

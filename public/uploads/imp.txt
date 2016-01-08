@@ -1,0 +1,45 @@
+console.log("q");
+ var fstream;
+    var files = [];
+    var busboy = new Busboy({headers: req.headers});
+    busboy.on('file', function (fieldname, file, filename) {
+        fstream = fs.createWriteStream(__dirname + '/public/uploads/' + filename);
+        file.pipe(fstream);
+		uploadname=filename;
+console.log("p");
+        fstream.on('close', function(){
+            console.log('file ' + filename + ' uploaded');
+            files.push(filename);
+        });
+	            
+});
+    busboy.on('finish', function() {
+      console.log('Upload complete');
+      //res.writeHead(200, { 'Connection': 'close' });
+      //res.end("");
+           });
+
+		   var post
+		   {	         
+			 ebookname = req.body.name,
+	            author    = req.body.author,
+	            edition   = req.body.edition,
+			    ebook     = uploadname
+	        }
+			 var objDB = new DB();
+	        objDB.query('INSERT INTO ebook_info SET ?',post, function (error, result) {
+	            if (error) 
+				{
+	                console.log(error.message);
+	                
+	            } 
+				else 
+				{
+	                console.log(result); 
+	            }
+	        
+	  console.log(uploadname);
+	  res.redirect("/addebook");
+    });
+	
+    return req.pipe(busboy);

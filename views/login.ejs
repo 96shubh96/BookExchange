@@ -1,0 +1,77 @@
+ <!DOCTYPE html>
+  <html>
+    <head>
+      <!--Import materialize.css-->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.1/css/materialize.min.css">
+  
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<!--<link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection"></link>-->
+ <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	 	
+	
+    </head>
+
+    <body background="static/images/background.png">
+	<div class="navbar-fixed">
+	 <nav>
+    <div class="nav-wrapper">
+      
+  <a class="btn waves-effect waves-teal" href="homepage">Book Exchange</a>
+      <ul class="right hide-on-med-and-down">
+    
+    <li><a href="signup">SignUp</a></li>
+   
+  </ul>
+    </div>
+  </nav>
+  </div>
+  <br><br><br>
+  <h4 class="center-align">Please login in to continue</h4><br>
+  <div class="row">
+    <form class="col s4 offset-s4 #f5f5f5 grey lighten-4" method="POST" action='/logindata'>
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="email" type="email" class="validate"name="email">
+          <label for="email">Email</label>
+        </div>
+      </div>      
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="password" type="password" class="validate" name="password">
+          <label for="password">Password</label>
+        </div>
+      </div>
+
+ <button class="btn waves-effect waves-light col s12" type="submit" name="action" href="profilepage">Log In</button>
+  <br></form>
+  </div>
+  <br><br><br><br><br><br><br><br><br>
+    <footer class="page-footer footer-copyright ">
+   <table>
+   <tr>
+   <td>
+   <center>
+   <i class="material-icons">email</i><p>BookExchangeSite@gmail.com</p>
+   </center>
+   </td>
+   <td>
+   <center>
+   <i class="material-icons">contact_phone</i><p>+91-8888122723</p>
+   </center>  
+   </td>
+   <td>
+   <center>
+   <p>Copy Right&copy2015BookExchange</p>
+   </center>
+   </td>
+   </tr>
+   </table>
+		  </footer>
+
+      <!--Import jQuery before materialize.js-->
+      <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.1/js/materialize.min.js"></script> 
+	  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+      <script type="text/javascript" src="js/materialize.min.js"></script>
+    </body>
+  </html>
